@@ -1,13 +1,17 @@
 ﻿using System;
 
-namespace ConsoleApp1
+namespace Zadanie4
 {
-    class Program2
+    class Obliczanie4
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Liczba liczb w działaniu");
             int i = Convert.ToInt32(Console.ReadLine()); //liczba ile liczb bedzie?
+            if (i == null)
+                {
+                Console.WriteLine("Bład: Brak liczby liczb w działaniu"); //Nie działa? Bład: Input string was not in a correct format
+            }
             float wynik = Convert.ToInt32(wynik = 0); //Wynik = 1 działa tylko przy mnożeniu i dzieleniu :( (zad 2)
             while (i-- > 0)
             {

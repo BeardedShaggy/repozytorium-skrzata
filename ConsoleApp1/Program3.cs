@@ -2,9 +2,9 @@
 
 namespace ConsoleApp1
 {
-    class Program2
+    class Obliczanie3
     {
-        static void Main(string[] args)
+        static void Zadanie3(string[] args)
         {
             Console.WriteLine("Liczba liczb w działaniu");
             int i = Convert.ToInt32(Console.ReadLine()); //liczba ile liczb bedzie?
