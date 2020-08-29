@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace ConsoleApp1
+namespace Zadania
 {
-    class Obliczanie
+    public class Obliczanie
     {
-        static void Zadanie1(string[] args)
+        public static void Zadanie1(string[] args)
         {
             Console.WriteLine("Liczba liczb w działaniu");
             int i= Convert.ToInt32(Console.ReadLine()); //liczba ile liczb bedzie?

@@ -14,7 +14,7 @@ namespace Zadania
             {
                 case 1:
 
-                    Zadania.Obliczanie.zadanie1(args); // namespace.class.method()
+                    Zadania.Obliczanie.Zadanie1(args); // namespace.class.method()
 
                     break;
                 
@@ -32,7 +32,7 @@ namespace Zadania
                 
                 case 4:
 
-                    Zadania.Obliczanie4.zadanie4(args);
+                    Zadania.Obliczanie4.Zadanie4(args);
 
                     break;
 
