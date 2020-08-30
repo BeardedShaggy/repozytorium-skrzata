@@ -35,7 +35,12 @@ namespace Zadania
                     Zadania.Obliczanie4.Zadanie4(args);
 
                     break;
+                
+                default:
 
+                    Console.WriteLine("Błąd: nie prawidłowy numer zadania lub jego brak.");
+
+                    break;
             }
 
         }
