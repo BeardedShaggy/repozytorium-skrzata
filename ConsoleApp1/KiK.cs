@@ -53,7 +53,7 @@ namespace Zadania
                 {
                     Console.WriteLine("Gracz krzyżyk");
                     znak = "x";
-           
+                    z--;
 
                 }
                 
