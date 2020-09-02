@@ -39,8 +39,7 @@ namespace Zadania
             array.SetValue("8", 2, 1);
             array.SetValue("9", 2, 2);
             Console.WriteLine("wybierz numer");
-            int z = Convert.ToBoolean();
-            int pos, i = Convert.ToInt32();
+            int i = Convert.ToInt32(i = 0); int z = Convert.ToInt32(z = 0); int pos = Convert.ToInt32(pos = 0)
             string znak = "";
             if (i < 9, i++)
             {
@@ -49,11 +48,10 @@ namespace Zadania
                     Console.WriteLine("Gracz Kółko");
                     znak = "o";
                 }
-                else if //Dla krzyzyka
+                else if (z > 0, z--) //Dla krzyzyka
                 {
                     Console.WriteLine("Gracz krzyżyk");
                     znak = "x";
-                    z--;
 
                 }
                 
