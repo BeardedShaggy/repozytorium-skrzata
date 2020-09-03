@@ -19,32 +19,12 @@ namespace Zadania
             array.SetValue("6", 1, 2);
             array.SetValue("7", 2, 0);
             array.SetValue("8", 2, 1);
-            array.SetValue("9", 2, 2);
-
-            System.Console.WriteLine("");
-                System.Console.Write(array[0, 0]);//1
-            System.Console.Write("|");
-                System.Console.Write(array[0, 1]);//2
-            System.Console.Write("|");
-                System.Console.Write(array[0, 2]);//3
-                System.Console.WriteLine("");
-                System.Console.Write(array[1, 0]);//4
-            System.Console.Write("|");
-                System.Console.Write(array[1, 1]);//5
-            System.Console.Write("|");
-                System.Console.Write(array[1, 2]);//6
-                System.Console.WriteLine("");
-                System.Console.Write(array[2, 0]);//7
-            System.Console.Write("|");
-                System.Console.Write(array[2, 1]);//8
-            System.Console.Write("|");
-                System.Console.Write(array[2, 2]);//9
-            System.Console.WriteLine("");
-            System.Console.WriteLine("wybierz numer");
+            array.SetValue("9", 2, 2); //Pokazuje pozycje :)
             int i = Convert.ToInt32(i = 0); int z = Convert.ToInt32(z = 0); int pos = Convert.ToInt32(pos = 0);
             string znak = "";
-            if (i < 9)
+            while (i < 9) //Dlaczego ja tu wcześniej użyłem if? dunno, don't care.
             {
+                i++;
                 System.Console.WriteLine("");
                 System.Console.Write(array[0, 0]);//1
                 System.Console.Write("|");
@@ -67,7 +47,6 @@ namespace Zadania
                 System.Console.WriteLine("wybierz numer");
                 if (z < 1) //Dla kolka
                 {
-                    i++;
                     z++;
                     Console.WriteLine("Gracz Kółko");
                     znak = "o";
@@ -77,7 +56,6 @@ namespace Zadania
                 }
                 else if (z > 0) //Dla krzyzyka
                 {
-                    i++;
                     z--;
                     Console.WriteLine("Gracz krzyżyk");
                     znak = "x";
@@ -132,8 +110,15 @@ namespace Zadania
                             array.SetValue(znak, 2, 2);
                             break;
                         }
+                    default:
+                        {
+                            Console.WriteLine("nie prawidłowa pozycja.");
+                            break;
+                        }
+
                         // Dodaj część odczytującą czy są 3 pod rząd kółka/krzyżyki
                         // inaczej dodaj "system" odczytujący czy jest remis
+                        // update: zdałem sobie sprawe że trzeba również dodać nie-możliwość zmiany czyjegoś wyboru : D
 
 
                 }
