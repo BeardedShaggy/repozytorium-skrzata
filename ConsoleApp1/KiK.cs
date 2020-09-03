@@ -45,23 +45,46 @@ namespace Zadania
             string znak = "";
             if (i < 9)
             {
-                i++;
+                System.Console.WriteLine("");
+                System.Console.Write(array[0, 0]);//1
+                System.Console.Write("|");
+                System.Console.Write(array[0, 1]);//2
+                System.Console.Write("|");
+                System.Console.Write(array[0, 2]);//3
+                System.Console.WriteLine("");
+                System.Console.Write(array[1, 0]);//4
+                System.Console.Write("|");
+                System.Console.Write(array[1, 1]);//5
+                System.Console.Write("|");
+                System.Console.Write(array[1, 2]);//6
+                System.Console.WriteLine("");
+                System.Console.Write(array[2, 0]);//7
+                System.Console.Write("|");
+                System.Console.Write(array[2, 1]);//8
+                System.Console.Write("|");
+                System.Console.Write(array[2, 2]);//9
+                System.Console.WriteLine("");
+                System.Console.WriteLine("wybierz numer");
                 if (z < 1) //Dla kolka
                 {
+                    i++;
                     z++;
                     Console.WriteLine("Gracz Kółko");
                     znak = "o";
+                    pos = int.Parse(Console.ReadLine());
+                    //Console.ReadLine(pos); nie działa
                     // Dodaj odczytywanie pozyczji z switch(pos)
                 }
                 else if (z > 0) //Dla krzyzyka
                 {
+                    i++;
                     z--;
                     Console.WriteLine("Gracz krzyżyk");
                     znak = "x";
+                    pos = int.Parse(Console.ReadLine());
                     // Dodaj odczytywanie pozycji z Switch(Pos)
 
                 }
-                
                 switch (pos)
                 {
                     case 1:
@@ -109,10 +132,10 @@ namespace Zadania
                             array.SetValue(znak, 2, 2);
                             break;
                         }
-                // Dodaj część odczytującą czy są 3 pod rząd kółka/krzyżyki
-                // inaczej dodaj "system" odczytujący czy jest remis
-                
-                
+                        // Dodaj część odczytującą czy są 3 pod rząd kółka/krzyżyki
+                        // inaczej dodaj "system" odczytujący czy jest remis
+
+
                 }
 
             }
