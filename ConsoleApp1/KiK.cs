@@ -9,50 +9,27 @@ namespace Zadania
     {
         public static void TicToeGame(string[] args)
         {
+            const int rows = 3;
+            const int columns = 3;
 
-            string[,] array = new string[3, 3]; //3 na 3 kratka.
-            array.SetValue("1", 0, 0);
-            array.SetValue("2", 0, 1);
-            array.SetValue("3", 0, 2);
-            array.SetValue("4", 1, 0);
-            array.SetValue("5", 1, 1);
-            array.SetValue("6", 1, 2);
-            array.SetValue("7", 2, 0);
-            array.SetValue("8", 2, 1);
-            array.SetValue("9", 2, 2); //Pokazuje pozycje :)
-            int i = Convert.ToInt32(i = 0); int z = Convert.ToInt32(z = 0); int pos = Convert.ToInt32(pos = 0);
+            string[,] array = GetMap(rows, columns);
+
+            int i = 0;
+            int z = 0;
+            int pos = 0;
             string znak = "";
             while (i < 9) //Dlaczego ja tu wcześniej użyłem if? dunno, don't care.
             {
                 i++;
-                System.Console.WriteLine("");
-                System.Console.Write(array[0, 0]);//1
-                System.Console.Write("|");
-                System.Console.Write(array[0, 1]);//2
-                System.Console.Write("|");
-                System.Console.Write(array[0, 2]);//3
-                System.Console.WriteLine("");
-                System.Console.Write(array[1, 0]);//4
-                System.Console.Write("|");
-                System.Console.Write(array[1, 1]);//5
-                System.Console.Write("|");
-                System.Console.Write(array[1, 2]);//6
-                System.Console.WriteLine("");
-                System.Console.Write(array[2, 0]);//7
-                System.Console.Write("|");
-                System.Console.Write(array[2, 1]);//8
-                System.Console.Write("|");
-                System.Console.Write(array[2, 2]);//9
-                System.Console.WriteLine("");
-                System.Console.WriteLine("wybierz numer");
+                MapSize(array, rows, columns);
+                Console.WriteLine("");
+                Console.WriteLine("wybierz numer");
                 if (z < 1) //Dla kolka
                 {
                     z++;
                     Console.WriteLine("Gracz Kółko");
                     znak = "o";
                     pos = int.Parse(Console.ReadLine());
-                    //Console.ReadLine(pos); nie działa
-                    // Dodaj odczytywanie pozyczji z switch(pos)
                 }
                 else if (z > 0) //Dla krzyzyka
                 {
@@ -125,6 +102,37 @@ namespace Zadania
 
             }
         }
+
+        private static string[,] GetMap(int rows, int columns)
+        {
+            string[,] array = new string[rows, columns]; //3 na 3 kratka.
+            int value = 1;
+
+            for (int row = 0; row < rows; ++row)
+            {
+                for (int column = 0; column < columns; ++column)
+                {
+                    array.SetValue(value.ToString(), row, column);
+                    value++;
+                }
+            }
+
+            return array;
+        }
+        private static void MapSize(string[,] array, int rows, int columns)
+        {
+
+            for (int row = 0; row < rows; ++row)
+            {
+                Console.WriteLine("");
+                for (int column = 0; column < columns; ++column)
+                {
+                    Console.Write(array[row, column]);
+                    Console.Write("|"); 
+                }
+            }
+        }
+        //private static string[,]
     }
 }
    
